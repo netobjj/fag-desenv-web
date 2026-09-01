@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Blog de Viagens</title>
     <style>
-        /* ===== Reset básico ===== */
         * {
             margin: 0;
             padding: 0;
@@ -29,7 +28,6 @@
             background-color: var(--cor-fundo);
             line-height: 1.7;
 
-            /* ===== LAYOUT MACRO COM CSS GRID ===== */
             display: grid;
             grid-template-columns: minmax(0, 1fr) 320px;
             grid-template-areas:
@@ -43,7 +41,6 @@
             padding: 24px;
         }
 
-        /* ===== Cabeçalho ===== */
         header {
             grid-area: cabecalho;
             background-color: var(--cor-primaria);
@@ -64,7 +61,6 @@
             font-size: 1.6rem;
         }
 
-        /* Flexbox no <nav> para alinhar os links do menu */
         header nav ul {
             list-style: none;
             display: flex;
@@ -87,7 +83,6 @@
             border-bottom-color: #fff;
         }
 
-        /* ===== Conteúdo principal ===== */
         main {
             grid-area: conteudo;
         }
@@ -136,7 +131,6 @@
             font-style: italic;
         }
 
-        /* ===== Barra lateral ===== */
         aside {
             grid-area: lateral;
             background-color: var(--cor-superficie);
@@ -175,7 +169,6 @@
             text-decoration: underline;
         }
 
-        /* ===== Rodapé ===== */
         footer {
             grid-area: rodape;
             background-color: var(--cor-primaria-escura);
@@ -185,10 +178,6 @@
             border-radius: var(--raio);
         }
 
-        /* ===== PONTO DE QUEBRA (BREAKPOINT) ===== */
-        /* Abaixo de 768px o grid de duas colunas é desfeito:
-           tudo passa a uma única coluna e o <aside> vai para
-           baixo do conteúdo principal. */
         @media (max-width: 768px) {
             body {
                 grid-template-columns: 1fr;
