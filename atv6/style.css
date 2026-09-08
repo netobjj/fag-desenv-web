@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #515050;
+    background-color: #eef2f5;
+    line-height: 1.6;
+    padding: 24px 0;
+}
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+header h1 {
+    color: #12506b;
+    margin-bottom: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1b6ca8;
+    font-weight: 600;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover {
+    color: #0d3d52;
+}
+
+.card {
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 20px;
+    border: 1px solid #d5dde3;
+    border-radius: 8px;
+
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: #12506b;
+    margin-bottom: 6px;
+}
+
+.card time {
+    display: block;
+    font-size: 0.9rem;
+    color: #8a99a6;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #444444;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+figure {
+    margin-top: 24px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #8a99a6;
+    text-align: center;
+}
+
+aside {
+    max-width: 700px;
+    margin: 24px auto 0;
+    padding: 20px 32px;
+}
+
+aside h3 {
+    color: #12506b;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+aside a {
+    color: #1b6ca8;
+    text-decoration: none;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.9rem;
+    color: #8a99a6;
+}
