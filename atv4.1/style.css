@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #1b6ca8;
+    --cor-primaria-escura: #12506b;
+    --cor-fundo: #eef2f5;
+    --cor-superficie: #ffffff;
+    --cor-texto: #444444;
+    --cor-texto-suave: #8a99a6;
+    --borda: 1px solid #d5dde3;
+    --sombra: 0 4px 14px rgba(0, 0, 0, 0.06);
+    --raio: 10px;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.7;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    grid-template-areas:
+        "cabecalho cabecalho"
+        "conteudo  lateral"
+        "rodape    rodape";
+    gap: 28px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+header {
+    grid-area: cabecalho;
+    background-color: var(--cor-superficie);
+    border: var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 20px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+header h1 {
+    color: var(--cor-primaria-escura);
+    font-size: 1.6rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--cor-primaria);
+    font-weight: 600;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+header nav a:hover,
+header nav a:focus {
+    color: var(--cor-primaria-escura);
+    border-bottom-color: var(--cor-primaria-escura);
+}
+
+main {
+    grid-area: conteudo;
+}
+
+.card {
+    background-color: var(--cor-superficie);
+    border: var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 32px;
+}
+
+.card h2 {
+    font-size: 2rem;
+    color: var(--cor-primaria-escura);
+    margin-bottom: 6px;
+}
+
+.card time {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+figure {
+    margin-top: 24px;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--cor-texto-suave);
+    text-align: center;
+}
+
+aside {
+    grid-area: lateral;
+    align-self: start;
+    background-color: var(--cor-superficie);
+    border: var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+aside h3 {
+    color: var(--cor-primaria-escura);
+    padding-bottom: 8px;
+    border-bottom: var(--borda);
+}
+
+aside ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+aside a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+aside a:hover,
+aside a:focus {
+    text-decoration: underline;
+}
+
+footer {
+    grid-area: rodape;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--cor-texto-suave);
+    padding: 16px;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cabecalho"
+            "conteudo"
+            "lateral"
+            "rodape";
+        gap: 20px;
+        padding: 16px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        justify-content: flex-start;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h2 {
+        font-size: 1.6rem;
+    }
+}
