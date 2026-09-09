@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <main class="app">
+        <h1>Lista de Tarefas</h1>
+
+        <form id="form-tarefa" class="entrada">
+            <input
+                type="text"
+                id="input-tarefa"
+                placeholder="Digite uma nova tarefa..."
+                autocomplete="off"
+            >
+
+            <textarea
+                id="description-tarefa"
+                placeholder="Digite a descrição da tarefa (opcional)..."
+                rows="4"
+            ></textarea>
+
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <p class="dica">Clique em uma tarefa para removê-la. Use a caixa de seleção para marcá-la como concluída.</p>
+
+        <ul id="lista-tarefas"></ul>
+    </main>
+
+    <script src="todo.js"></script>
+</body>
+</html>
